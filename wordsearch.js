@@ -7,7 +7,8 @@ const wordSearch = (letters, word) => {
         if (l.includes(word)) return true;
     }
     const newArr = transpose(letters);
-    for (l of newArr) {
+    newArr2 = newArr.map(ls => ls.join(''))
+    for (l of newArr2) {
         if (l.includes(word)) return true;
     }
     return false;
